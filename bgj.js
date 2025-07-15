@@ -174,22 +174,3 @@ import $ from "https://esm.sh/jquery";
     });
 
 })($);
-
-
-const startDate = new Date('2025-07-06');
-const endDate   = new Date('2025-07-28');
-const tasks = [
-  {id:1, label:'Préparation matière',  start:'2025-07-07',             end:'2025-07-10',             type:'production', durationMs:null, progress:0.7, dependsOn:[]},
-  {id:2, label:'Montage',               start:'2025-07-11',             end:'2025-07-16',             type:'production', durationMs:null, progress:0.6, dependsOn:[1]},
-  {id:3, label:'Contrôle qualité',      start:'2025-07-17',             end:'2025-07-19',             type:'qa',         durationMs:null, progress:0.3, dependsOn:[2]},
-  {id:4, label:'Expédition',            start:'2025-07-21',             end:'2025-07-23',             type:'shipping',   durationMs:null, progress:0.1, dependsOn:[3]},
-  {id:5, label:'Test court',            start:'2025-07-24T09:00',       end:'2025-07-24T12:15',       type:'qa',         durationMs:null, progress:0.5, dependsOn:[]},
-  {id:6, label:'Ultra rapide',          start:'2025-07-25T14:00',       end:'2025-07-25T14:18',       type:'shipping',   durationMs:null, progress:0.9, dependsOn:[]}
-]; 
-
-  const bgj = $.bgj({
-    target:   '#target',
-    tasks:    tasks,
-    startDate: startDate,
-    endDate:   endDate,
-  }); 
