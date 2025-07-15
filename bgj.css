@@ -1,0 +1,49 @@
+   :root {
+            --gantt-bg: #f9fafb;
+            --gantt-card: #fff;
+            --gantt-border: #eceff2;
+            --gantt-text-main: #555;
+            --gantt-header: #888;
+            --bar-prod-main: #66bc8a;
+            --bar-prod-dark: #3a8f5f;
+            --bar-prod-border: #9ad9b2;
+            --bar-prod-progress: #2d8b5a;
+            --bar-qa-main: #ffe080;
+            --bar-qa-dark: #ffb100;
+            --bar-qa-border: #ffe8aa;
+            --bar-qa-progress: #bf7a01;
+            --bar-ship-main: #ff9494;
+            --bar-ship-dark: #e86666;
+            --bar-ship-border: #ffc0c0;
+            --bar-ship-progress: #b84040;
+            --arrow-default: #aab;
+            --gantt-grid: #7788a033;
+            --gantt-grid-bold: #6688bb77;
+            --gantt-we-bg: #f9fafb;
+        }
+        body { font-family: 'Fira Sans', Arial, sans-serif; background: var(--gantt-bg); margin: 0; padding: 40px; }
+        .gantt-table-main { border-collapse: collapse; background: var(--gantt-card); border-radius: 18px; box-shadow: 0 4px 18px 0 rgba(40,40,60,0.12); width: auto; min-width: 900px; margin: 0; overflow: visible; }
+        .gantt-table-main td, .gantt-table-main th { padding: 0; margin: 0; }
+        .gantt-label-col { width: 180px; min-width: 140px; max-width: 240px; text-align: left; font-weight: 600; font-size: 15px; background: var(--gantt-bg); color: var(--gantt-text-main); padding: 0 18px 0 18px; border-right: 1.5px solid var(--gantt-border); white-space: nowrap; vertical-align: middle; }
+        .gantt-scroll-td { padding: 0; margin: 0; }
+        .gantt-scroll-wrap { overflow-x: auto; min-width: 400px; max-width: 75vw; border-radius: 12px; background: var(--gantt-card); }
+        table.gantt-inner-table { border-collapse: separate; border-spacing: 0; width: max-content; min-width: 600px; }
+        .gantt-inner-table th { height: 36px; text-align: center; color: var(--gantt-header); font-size: 13px; font-weight: 700; background: var(--gantt-card); border-bottom: 2px solid var(--gantt-border); border-right: 1px solid var(--gantt-border); min-width: 50px; }
+        .gantt-inner-table th.weekend { background: var(--gantt-we-bg) !important; }
+        .gantt-inner-table td { height: 46px; background: none; position: relative; border-right: 1px solid var(--gantt-border); }
+        .gantt-inner-table td.weekend { background: var(--gantt-we-bg) !important; }
+        .gantt-separator td {
+            border-bottom: 2px dashed var(--gantt-border);
+            height: 3px;
+            background: transparent !important;
+            padding: 0;
+        }
+        .gantt-bar { position: absolute; height: 26px; border-radius: 7px; cursor: pointer; background: var(--bar-prod-main); box-shadow: 0 2px 6px rgba(70,120,200,0.06); transition: box-shadow 0.15s, transform 0.12s; border: 2px solid var(--bar-prod-border); top: 10px; left: 0; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; color: #fff; text-shadow: 0 1px 3px #234a3d77, 0 0 2px #2228; letter-spacing: 0.5px; overflow: hidden; white-space: nowrap; z-index: 10; }
+        .gantt-bar-progress { position: absolute; top: 0; left: 0; height: 6px; border-radius:  0; z-index: 11; opacity: 0.93; }
+        .gantt-bar[data-type='production'] { background: linear-gradient(180deg, var(--bar-prod-main) 10%, var(--bar-prod-dark) 100%); border-color: var(--bar-prod-border); }
+        .gantt-bar[data-type='qa'] { background: linear-gradient(180deg, var(--bar-qa-main) 10%, var(--bar-qa-dark) 100%); border-color: var(--bar-qa-border); color: #a96b00; text-shadow: 0 1px 3px #ffc84577; }
+        .gantt-bar[data-type='shipping'] { background: linear-gradient(180deg, var(--bar-ship-main) 10%, var(--bar-ship-dark) 100%); border-color: var(--bar-ship-border); }
+        .gantt-bar-progress[data-type='production'] { background: var(--bar-prod-progress); }
+        .gantt-bar-progress[data-type='qa'] { background: var(--bar-qa-progress); }
+        .gantt-bar-progress[data-type='shipping'] { background: var(--bar-ship-progress); }
+        .gantt-bar .gantt-bar-duration { display: block; text-align: center; width: 100%; pointer-events: none; user-select: none; font-size: 13px; font-weight: 700; z-index: 12; }
