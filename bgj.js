@@ -222,11 +222,11 @@ const tasks = [
                         let e = parseLocalDate(task.end);
                         if (/^\d{4}-\d{2}-\d{2}$/.test(task.end)) e.setDate(e.getDate() + 1);
                         // barwidth
-                        let barWidth = ((e - s) / ms * width*1.02)+3 ;
+                        let barWidth = ((e - s) / ms * width*1.02)+5 ;
                         if (currentZoom == 'week') 
-                          barWidth = ((e - s) / ms * width*1.07) ;
+                          barWidth = ((e - s) / ms * width*1.07)+2 ;
                         if (currentZoom == 'hour') 
-                          barWidth = ((e - s) / ms * width*1.0332)+4;
+                          barWidth = ((e - s) / ms * width*1.0332)+6;
                         // offset
                         let offset = ((s - unitStart ) / ms * width);
                         if (currentZoom == 'hour')
