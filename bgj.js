@@ -237,7 +237,7 @@ const tasks = [
                         const formatter = new Intl.DateTimeFormat(undefined, {    day: '2-digit',  month: '2-digit',  year: 'numeric',  hour: '2-digit',  minute: '2-digit',});
                         let time1 = formatter.format(s);
                         let time2 = formatter.format(e);
-                        let title =task.label + "\n" + durationBetween(task.start, task.end) + ` ${time1} => ${time2}\n` + (task.progress * 100) + "%";
+                        let title =task.label + `\n${time1} -> ${time2}\n` + durationBetween(task.start, task.end) + `\n` + (task.progress * 100) + "%";
                         let style = `;background:${tColor};background: linear-gradient(180deg,${tColor} 10%, color-mix(in srgb,${tColor} 70%, black) 100%);border: 1px solid color-mix(in srgb, ${tColor} 80%, white)`;
                         cell += `<div class="gantt-bar" data-id="${task.id}" data-type="${task.type}" style="width:${Math.abs(barWidth-8)}px;left:${offset}px;${style}" title="${title}">
                             <div class="gantt-bar-progress" data-type="${task.type}" style="width:${progressWidth}px;background-color:color-mix(in srgb,${tColor} 65%, black)"></div>
