@@ -13,6 +13,12 @@ https://codepen.io/homer8173/pen/RNWPBjj
 ![Screenshot of a beautiful-gantt-and-jquery on codepen, BGJ](/3zoom.jpg)
 
 
+# Realease with task relations + milstones + no date mode
+https://codepen.io/homer8173/pen/ogjMVbj
+
+![Screenshot of a beautiful-gantt-and-jquery on codepen, BGJ](/final1.jpg)
+
+
 
 # Task Data Model
 
